@@ -1,9 +1,15 @@
 import { Image, StyleSheet, Platform } from 'react-native';
-
+// take note that the dependancies that have @/components are all tsx files in the components directories.
+// It is important to remember that we will have to generate our own UI components or pages.
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+
+import MainScreen from '..';
+import LessonScreen from '../lesson';
+import LoginScreen from '../login';
+import ExerciseScreen from '../exercise';
 
 export default function HomeScreen() {
   return (

@@ -6,10 +6,10 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-import MainScreen from '../screens/MainScreen';
-import LessonScreen from '../screens/LessonScreen';
-import LoginScreen from '../screens/LoginScreen';
-import ExerciseScreen from '../screens/ExerciseScreen';
+import MainScreen from '..';
+import LessonScreen from '../lesson';
+import LoginScreen from '../login';
+import ExerciseScreen from '../exercise';
 
 export default function HomeScreen() {
   return (

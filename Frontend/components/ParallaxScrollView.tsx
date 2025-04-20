@@ -81,4 +81,6 @@ const styles = StyleSheet.create({
   },
 });
 
+// Removed the misplaced "scripts" property.
+
 

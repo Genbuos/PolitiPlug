@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, Alert, StyleSheet, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import HyperspeedStars from "../components/Hyperspeed";
 
@@ -27,7 +27,7 @@ export default function LoginScreen() {
     end={{ x: 1, y: 1 }}
     style={ styles.container }
     >
-    <View style={styles.container}>
+  
       <HyperspeedStars /> {/* Hyperspeed animation */}
       <View style={styles.formContainer}>
         <Text style={styles.title}>Login</Text>
@@ -45,10 +45,23 @@ export default function LoginScreen() {
           value={password}
           onChangeText={setPassword}
           secureTextEntry
-        />
-        <Button title="Login" onPress={handleLogin} color="#FFFFFF" />
+          />
+
+          <TouchableOpacity style={styles.primaryButton} onPress={handleLogin}>
+            <Text style={styles.primaryButtonText}>Login</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.secondaryButton}
+            onPress={() => Alert.alert("Reset password link sent to your email")}>
+            <Text style={styles.secondaryButtonText}>Forgot Password?</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.secondaryButton}
+            onPress={() => Alert.alert("Redirecting to Sign Up")}>
+            <Text style={styles.secondaryButtonText}>Sign Up</Text>
+          </TouchableOpacity>
       </View>
-    </View>
+   
     </LinearGradient>
   );
 }
@@ -60,7 +73,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   formContainer: {
-    width: "300%",
+    width: "25%",
     padding: 16,
     backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white background
     borderRadius: 8,
@@ -81,5 +94,29 @@ const styles = StyleSheet.create({
     borderColor: "#000000", // Black border
     borderRadius: 8,
     backgroundColor: "#FFFFFF",
+  },
+  primaryButton: {
+    backgroundColor: "#FFD700", // Gold color
+    padding: 12,
+    borderRadius: 8,
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  primaryButtonText: {
+    color: "#000000", // Black text
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  secondaryButton: {
+    backgroundColor: "#000000", // Black color
+    padding: 12,
+    borderRadius: 8,
+    alignItems: "center",
+    marginBottom: 12,
+  },
+  secondaryButtonText: {
+    color: "#FFD700", // Gold text
+    fontWeight: "bold",
+    fontSize: 16,
   },
 });

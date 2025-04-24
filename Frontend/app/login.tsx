@@ -8,18 +8,12 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
 
   const handleLogin = async () => {
-    if (!email || !password) {
-      Alert.alert("Please enter your email and password");
-      return;
-    }
-    try {
-      console.log("Logging in with email:", email, "and password:", password);
-      Alert.alert("Login successful!");
-    } catch (error) {
-      Alert.alert("Login failed. Please try again.");
-    }
+  
   };
 
+  const handleSignUp = async () => {
+    // Handle sign-up logic here
+  };
   return (
     <LinearGradient
     colors={["#000000", "#FFD700"]}

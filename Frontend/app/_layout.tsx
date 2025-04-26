@@ -28,9 +28,12 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+    <ThemeProvider value={colorScheme === 'light' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="index" options={{ title: 'Home' }} />
+        <Stack.Screen name="login" options={{ title: 'Login' }} />
+        <Stack.Screen name="lesson" options={{ title: 'Lesson' }} />
+        <Stack.Screen name="exercise" options={{ title: 'Exercise' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

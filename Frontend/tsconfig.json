@@ -6,7 +6,15 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "jsx": "react-jsx", // Use "react" if you're using React 16 or below
+    "module": "esnext",
+    "target": "es6",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "**/*.ts",
